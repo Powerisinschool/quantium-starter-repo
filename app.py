@@ -10,10 +10,10 @@ app = Dash()
 
 df = pd.read_csv('pink_morsels_filtered.csv')
 
-fig = px.line(df, x="date", y="sales", title="Sales by date", labels={"date": "Date", "sales": "Sales"})
+fig = px.line(df, x="date", y="sales", title="Pink morsel sales by date", labels={"date": "Date", "sales": "Sales"})
 
 app.layout = html.Div(children=[
-    html.H1(children='Effect of price increase on sales', style={'textAlign': 'center'}),
+    html.H1(children='Effect of price increase on Pink Morsel sales', style={'textAlign': 'center'}),
     dcc.Graph(
         id="wind-speed",
         figure=fig,
