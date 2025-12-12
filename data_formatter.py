@@ -7,4 +7,4 @@ filtered = data.loc[data['product'] == 'pink morsel'].reset_index(drop=True)
 filtered['price_numeric'] = filtered['price'].str.replace('$', '').astype(float)
 filtered['sales'] = filtered['price_numeric'] * filtered['quantity']
 filtered.drop(['product', 'price', 'quantity', 'price_numeric'], axis=1, inplace=True)
-filtered.to_csv('data/pink_morsels_filtered.csv', index=False)
+filtered.to_csv('pink_morsels_filtered.csv', index=False)
